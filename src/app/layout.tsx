@@ -16,10 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<Providers>
 					{/* @ts-expect-error Server Component */}
 					<Navbar />
+					<MobileMenu/>
 					<Toaster position='bottom-right' />
-
-					<MobileMenu />
-
 					<main>{children}</main>
 				</Providers>
 

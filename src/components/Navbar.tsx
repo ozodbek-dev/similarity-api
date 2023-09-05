@@ -1,6 +1,7 @@
 // import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { buttonVariants } from "./ui/Button";
 import SignInButton from "./ui/SignInButton";
@@ -25,6 +26,9 @@ const Navbar = async () => {
 					<Link href='/documentation' className={buttonVariants({ variant: "ghost" })}>
 						Documentation
 					</Link>
+					<div>
+						<MobileMenu />
+					</div>
 					{session ? (
 						<>
 							<Link className={buttonVariants({ variant: "ghost" })} href='/dashboard'>

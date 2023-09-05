@@ -44,7 +44,7 @@ const Code: FC<CodeProps> = ({ code, show, animated, animationDelay, language })
 		<Highlight {...defaultProps} code={text} language={language} theme={theme}>
 			{({ className, tokens, getLineProps, getTokenProps }) => (
 				<pre
-					className={className + "transition-all w-fit bg-transparent duration-100 py-0 no-scrollbar"}
+					className={className + "transition-all w-fit bg-transparent duration-100 py-0 no-scrollbar h-auto scroll-auto"}
 					style={{
 						maxHeight: show ? lines * 24 : 0,
 						opacity: show ? 1 : 0,
